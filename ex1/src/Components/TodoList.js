@@ -6,15 +6,15 @@ class TodoList extends React.Component {
     render() {
         return (
             <div>
-                {this.props.listCheck.map((item) => 
+                {this.props.listCheck.map((item , index) => 
                     <Card border="dark" className='mt-5'>
-                        <Card.Header>{item.Name}</Card.Header>
+                        <Card.Header>{index+1} . {item.Name} </Card.Header>
                         <Card.Body>
                             <blockquote className="blockquote mb-0">
                                 <p>{item.description}</p>
                             </blockquote>
-                        <FaTrashAlt className='m-1' onClick={this.props.removetodo}/>
-                        <FaEdit className='m-1' onClick={this.props.editetodo}/>
+                        <FaTrashAlt className='m-2' onClick={()=>this.props.deleteRow(index)}/>
+                        <FaEdit className='m-2'/>
                         </Card.Body>
                     </Card>
                 )}

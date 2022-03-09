@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button,Modal ,Form, Container , Row} from 'react-bootstrap'
+import { Button,Modal ,Form} from 'react-bootstrap'
 import TodoList from './TodoList';
 
 class TodoForm extends React.Component {
@@ -15,6 +15,8 @@ class TodoForm extends React.Component {
         this.handleModalShow = this.handleModalShow.bind(this);
         this.handleshow = this.handleshow.bind(this);
         this.handleSave = this.handleSave.bind(this);
+        this.deleteRow = this.deleteRow.bind(this);
+
     };
 
 
@@ -65,10 +67,9 @@ class TodoForm extends React.Component {
         };
     };
 
-    handleremove(){
-        
+    deleteRow(index) {
+        this.setState({list: this.state.list.filter((item, numindex)=> numindex !== index)})
     }
-
 
     render() {
         return (
@@ -109,7 +110,7 @@ class TodoForm extends React.Component {
                     </Modal.Footer>
                 </Modal>
                 <div className = 'rowlist'>
-                    <TodoList listCheck={this.state.list} removetodo={this.handleremove} editetodo={this.handleedited}/>
+                    <TodoList listCheck={this.state.list} deleteRow = {this.deleteRow}/>
                 </div>
             </div>
         );
