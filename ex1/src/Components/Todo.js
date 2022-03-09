@@ -1,5 +1,5 @@
 import React from 'react';
-import TodoList from './TodoList';
+import TodoForm from './TodoForm';
 
 class Todo extends React.Component {
 constructor(props) {
@@ -10,8 +10,9 @@ constructor(props) {
 
     render() {
         return (
-            <div>
-                <TodoList />
+            <div className='header text-center p-5 w-100'>
+                <h1>ToDo List</h1>
+                <TodoForm />
             </div>
         );
     };
