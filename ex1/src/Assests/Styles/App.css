@@ -1,5 +1,8 @@
 .header{
   height: 200px;
-  width: 100%;
-  background-color:rgb(215, 201, 247) ;
+  background-color:rgb(255, 234, 225) ;
+}
+
+.header h1{
+  letter-spacing: 7px;
 }
