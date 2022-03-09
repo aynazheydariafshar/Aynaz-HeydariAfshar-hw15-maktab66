@@ -65,6 +65,10 @@ class TodoForm extends React.Component {
         };
     };
 
+    handleremove(){
+        
+    }
+
 
     render() {
         return (
@@ -105,7 +109,7 @@ class TodoForm extends React.Component {
                     </Modal.Footer>
                 </Modal>
                 <div className = 'rowlist'>
-                    <TodoList listCheck={this.state.list}/>
+                    <TodoList listCheck={this.state.list} removetodo={this.handleremove} editetodo={this.handleedited}/>
                 </div>
             </div>
         );
