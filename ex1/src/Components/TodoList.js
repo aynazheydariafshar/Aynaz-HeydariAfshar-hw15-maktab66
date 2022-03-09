@@ -1,6 +1,7 @@
 import React from 'react';
 import {Card} from 'react-bootstrap';
-import {FaTrashAlt , FaEdit} from 'react-icons/fa'
+import {FaTrashAlt , FaEdit} from 'react-icons/fa';
+
 
 class TodoList extends React.Component {
     render() {
