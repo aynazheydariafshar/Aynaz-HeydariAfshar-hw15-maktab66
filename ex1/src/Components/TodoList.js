@@ -13,7 +13,7 @@ class TodoList extends React.Component {
                             <blockquote className="blockquote mb-0">
                                 <p>{item.description}</p>
                             </blockquote>
-                        <FaTrashAlt className='m-2' onClick={()=>this.props.deleteRow(index)}/>
+                        <FaTrashAlt className='trash m-2' onClick={()=>this.props.deleteRow(index)}/>
                         <FaEdit className='m-2'/>
                         </Card.Body>
                     </Card>

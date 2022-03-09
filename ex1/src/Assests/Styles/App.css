@@ -16,3 +16,8 @@
   justify-content: space-around;
   margin: 50px;
 }
+
+.trash:hover{
+  cursor: pointer;
+  color: red;
+}
