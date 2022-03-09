@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button,Modal ,Form } from 'react-bootstrap'
+import { Button,Modal ,Form, Container , Row} from 'react-bootstrap'
 import TodoList from './TodoList';
 
 class TodoForm extends React.Component {
@@ -104,7 +104,9 @@ class TodoForm extends React.Component {
                         </Button>
                     </Modal.Footer>
                 </Modal>
-                <TodoList listCheck={this.state.list}/>
+                <div className = 'rowlist'>
+                    <TodoList listCheck={this.state.list}/>
+                </div>
             </div>
         );
     };

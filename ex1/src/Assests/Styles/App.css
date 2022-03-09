@@ -6,3 +6,13 @@
 .header h1{
   letter-spacing: 7px;
 }
+
+.rowlist div{
+  width: 100%;
+}
+
+.rowlist{
+  display: flex;
+  justify-content: space-around;
+  margin: 50px;
+}
