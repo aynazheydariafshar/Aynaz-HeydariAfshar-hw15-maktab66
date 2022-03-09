@@ -21,39 +21,49 @@ class TodoForm extends React.Component {
     handleshow(){
         this.setState({
             showHide: !this.state.showHide
-        })
+        });
+    };
+
+    componentDidMount(){
+        let arr = localStorage.getItem('list');
+        if(arr){
+            let objList = JSON.parse(arr)
+            this.setState({
+                list : objList
+            })
+        }
     }
 
     
     handleModalShow(taskobj) {
-        let templist = this.state.list
-        templist.push(taskobj)
+        let templist = this.state.list;
+        templist.push(taskobj);
+        localStorage.setItem('list', JSON.stringify(templist))
         this.setState({
             showHide: !this.state.showHide ,
             list : templist
-        })
-    }
+        });
+    };
 
     handleSave(){
         let taskobj = {};
         taskobj["Name"] = this.state.taskName;
-        taskobj["desc"] = this.state.description;
+        taskobj["description"] = this.state.description;
         this.handleModalShow(taskobj);
-    }
+    };
 
     handleChange(e){
         const {name,value} = e.target;
-
         if(name === "TitleName"){
             this.setState({
                 taskName : value
-            })
+            });
         }else{
             this.setState({
                 description : value
-            })
-        }
-    }
+            });
+        };
+    };
 
 
     render() {
