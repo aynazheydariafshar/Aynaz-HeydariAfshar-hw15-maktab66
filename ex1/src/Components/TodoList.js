@@ -8,7 +8,7 @@ class TodoList extends React.Component {
             <div>
                 {this.props.listCheck.map((item , index) => 
                     <Card className='card mt-5'>
-                        <Card.Header>{index+1} . {item.Name} </Card.Header>
+                        <Card.Header className='h4'>{index+1} . {item.Name} </Card.Header>
                         <Card.Body>
                             <blockquote className="blockquote mb-0">
                                 <p>{item.description}</p>
